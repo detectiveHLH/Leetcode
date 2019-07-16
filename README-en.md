@@ -7,7 +7,7 @@ For personal reasons, all current code is implemented by Go. Later, if there is 
 ## Run example
 For example, if you want to run problem 1, you just need run the code below.
 ```bash
-./run.sh 1
+./run 1
 ```
 If the problem is not exist, you will encounter the error below.
 ```bash
