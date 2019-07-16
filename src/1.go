@@ -1,28 +1,28 @@
 package main
 
-import (
-	"fmt"
-	"os"
-	"time"
-)
+import "fmt"
 
-// 实现的🚀发射倒计时的程序，火箭会在5秒钟后发射
-// 在倒数的过程中，如果输入任意的字符，回车之后就会终止发射
-func main() {
-	abort := make(chan struct{})
-
-	go func() {
-		_, _ = os.Stdin.Read(make([]byte, 1))
-		abort <- struct{}{}
-	}()
-
-	fmt.Println("Commencing countdown.")
-	select {
-	case <-time.After(5 * time.Second):
-		break
-	case <-abort:
-		fmt.Println("Launch aborted!")
-		return
+func twoSum(nums []int, target int) []int {
+	m := map[int]int{}
+	var ls int
+	for i := range nums {
+		ls = m[nums[i]]
+		if ls != 0 {
+			return []int{ls - 1, i}
+		}
+		m[target-nums[i]] = i + 1
 	}
-	fmt.Println("Launch.")
+	return nil
+}
+
+func main() {
+	// define parameter
+	nums := []int{2, 7, 11, 15}
+	target := 9
+
+	fmt.Printf("Params:\n  nums: %v\n  target: %v\n", nums, target)
+
+	result := twoSum(nums, target)
+
+	fmt.Printf("Result:\n  %v\n", result)
 }
