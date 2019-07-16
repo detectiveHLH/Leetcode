@@ -1,6 +1,11 @@
-<h1 align="center">LeetCode解题记录</h1>
+<h1 align="center">leetcode解题记录</h1> 
 
-所有在LeetCode上的刷题记录
+
+中文 | [English](./README-en.md)
+
+由于个人的原因，目前所有的代码均用Go实现。后期如果有时间会补上其他语言的实现版本，例如Java，JavaScript.
+
+## 题目解析
 
 - [1.两数之和](./1.两数之和.md)
 - [4.寻找两个有序数组的中位数](./4.寻找两个有序数组的中位数.md)
