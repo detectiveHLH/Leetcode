@@ -22,7 +22,6 @@ func removeDuplicates(nums []int) int {
 func main() {
 	// define parameter
 	num := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
-
 	fmt.Printf("Params:\n  nums: %v\n", num)
 
 	index := removeDuplicates(num)
